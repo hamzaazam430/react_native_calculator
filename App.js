@@ -29,9 +29,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import RNFetchBlob from 'rn-fetch-blob';
-
-import NetInfo from '@react-native-community/netinfo';
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export default class App extends Component {
   
@@ -83,16 +81,7 @@ export default class App extends Component {
     return final;
   }
   UNSAFE_componentWillMount(){
-    // var NetInfo = useNetInfo();
-    // NetInfo.fetch().then(state => {
-    //   if (state.isConnected) {
-    //     console.log("Connected");
-        this.loadFormula();
-    //   } else {
-    //     console.log("Not connected");
-    //     alert('You are not connected to internet.');
-    //   }
-    // });
+    this.loadFormula();
   }
 
   render () {
@@ -207,7 +196,8 @@ const styles = StyleSheet.create({
   inputBoxHeading: {
     flex: 0.5,
     marginTop: 8,
-    fontSize: 13,
+    // fontSize: 13,
+    fontSize: RFPercentage(2),
     color: '#e2f0ff',
     marginLeft: 10
   },
@@ -215,7 +205,8 @@ const styles = StyleSheet.create({
     flex: 0.5,
     textAlign: 'right',
     right: 0,
-    fontSize: 30,
+    // fontSize: 30,
+    fontSize: RFPercentage(4),
   },
   outputBox: { 
     flex: 0.7,
@@ -225,7 +216,8 @@ const styles = StyleSheet.create({
   outputBoxHeading: {
     flex: 0.5,
     marginTop: 5,
-    fontSize: 13,
+    // fontSize: 13,
+    fontSize: RFPercentage(2.5),
     color: '#e2f0ff',
     marginLeft: 10
   },
@@ -233,7 +225,9 @@ const styles = StyleSheet.create({
     flex: 0.5,
     textAlign: 'right',
     right: 0,
-    fontSize: 40,
+    // fontSize: 40,
+    fontSize: RFPercentage(5),
+    // fontSize: RFValue(40),
   },
   buttonPanel: { 
     flex: 4, 
@@ -242,7 +236,7 @@ const styles = StyleSheet.create({
   buttonRow: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    height: '15%'
+    height: '20%'
   },
   buttonText: {
     fontSize: 20,
@@ -259,7 +253,8 @@ const styles = StyleSheet.create({
   },
   clearText: {
     margin: 10,
-    fontSize: 40,
+    // fontSize: 40,
+    fontSize: RFPercentage(7),
     color: '#030303',
     fontWeight: 'bold',
   }
