@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
     height: '20%'
   },
   buttonText: {
-    fontSize: 20,
+    fontSize: RFPercentage(3),
     fontWeight: 'bold',
   },
   buttonIndividual: {
@@ -249,7 +249,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#2c4960',
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 20
+    // borderRadius: 20
+    borderRadius: RFPercentage(3)
   },
   clearText: {
     margin: 10,
